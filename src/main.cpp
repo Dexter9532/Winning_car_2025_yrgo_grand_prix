@@ -105,9 +105,9 @@ void loop() {
 
         int angle = servoCenter;
         if (irLeft > irRight) {
-            angle = servoCenter + steerAmount; // hinder vänster → sväng höger
+            angle = servoCenter + steerAmount; // hinder vänster -> sväng höger
         } else if (irRight > irLeft) {
-            angle = servoCenter - steerAmount; // hinder höger → sväng vänster
+            angle = servoCenter - steerAmount; // hinder höger-> sväng vänster
         }
 
         steeringServo.write(constrain(angle, 50, 120));
